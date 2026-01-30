@@ -1,4 +1,4 @@
-Restaurant Table Reservation Website
+# Restaurant Table Reservation Website
 
 A web-based application that allows users to reserve restaurant tables online.  
 The system helps restaurants manage bookings efficiently and provides customers with a smooth reservation experience.
