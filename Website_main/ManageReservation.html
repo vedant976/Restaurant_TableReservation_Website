@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Reservations | La Dolce Vita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Anvay: Link this to the main CSS file -->
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2><a href="restaurant.html" id="logo">La Dolce Vita</a></h2>
+    <div>
+      <ul>
+        <li><a href="restaurant.html">Welcome</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="Reservations.html">Reservations</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="ManageReservation.html" class="active">Manage Reservation</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="center">
+    <h1 class="alex-brush">Manage Your Reservations</h1>
+    <p>Update or delete your existing reservations</p>
+  </div>
+</header>
+
+<section class="reservation-section add-padding">
+  <!-- Reservation List Section -->
+  <div class="reservation-list-container">
+    <h2>Your Reservations</h2>
+    <ul id="reservation-list">
+      <!-- Reservations will be dynamically loaded here by JavaScript -->
+    </ul>
+  </div>
+
+  <!-- Vedant: This is the Update Reservation Form code. Add backend accordingly -->
+  <div class="reservation-form-container">
+    <h2>Update Reservation</h2>
+    <form id="update-reservation-form" class="reservation-form">
+      <input type="hidden" id="reservation-id" name="id">
+      
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name">
+    
+      <label for="date">Reservation Date:</label>
+      <input type="date" id="date" name="date">
+    
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time">
+    
+      <label for="guests">Number of Guests:</label>
+      <input type="text" id="guests" name="guests" min="1" max="20">
+    
+      <button type="submit" class="reservation-button">Update Reservation</button>
+    </form>
+  </div>
+
+  <!-- Vedant: This is Delete Reservation Form code. Add backend accordingly -->
+  <div class="delete-reservation-form-container">
+    <h2>Delete Reservation by Name</h2>
+    <form id="delete-reservation-form" action="/reservation/cancel" method="POST">
+      <label for="delete-name">Full Name:</label>
+      <input type="text" id="delete-name" name="name">
+      <button type="submit" class="delete-button">Delete Reservation</button>
+  </form>
+  </div>
+</section>
+
+<!-- Vedant: Include your scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<script src="manageReservations.js"></script>
+<script src="formValidation.js"></script>
+
+</body>
+</html>

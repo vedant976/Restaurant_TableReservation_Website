@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile | La Dolce Vita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2><a href="restaurant.html" id="logo">rosa</a></h2>
+    <button class="nav-button fa fa-bars"></button>
+    <div>
+      <ul>
+        <button class="exit-menu fa fa-times"></button>
+        <li><a href="restaurant.html">Welcome</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="userprofile.html" id="profile-icon" class="fa fa-user-circle" style="font-size: 24px;"></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="center">
+    <h1 class="alex-brush">Your Profile</h1>
+    <p>Welcome to your account</p>
+  </div>
+</header>
+
+<section class="profile-section add-padding">
+  <div class="profile-container">
+    <div class="profile-picture">
+      <img src="https://example.com/user-profile.jpg" alt="Profile Picture" />
+    </div>
+    <div class="profile-details">
+      <h2>Username: Anvay</h2>
+      <p>Email: johndoe@example.com</p>
+      <button id="logout-button" class="logout-button">Logout</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Logout functionality
+  document.getElementById('logout-button').addEventListener('click', function() {
+    // Clear login state
+    localStorage.removeItem('isLoggedIn');
+    // Redirect to home page
+    window.location.href = 'restaurant.html';
+  });
+</script>
+
+</body>
+</html>

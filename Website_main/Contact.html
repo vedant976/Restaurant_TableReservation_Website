@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | La Dolce Vita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2><a href="restaurant.html" id="logo">La Dolce Vita</a></h2>
+    <button class="nav-button fa fa-bars"></button>
+    <div>
+      <ul>
+        <button class="exit-menu fa fa-times"></button>
+        <li><a href="restaurant.html">Welcome</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="Contact.html" class="active">Contact</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="ManageReservation.html">Manage Reservation</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="center">
+    <h1 class="alex-brush">Contact Us</h1>
+    <h2>Get in Touch</h2>
+    <span id="asterisk">*</span>
+    <p>We'd love to hear from you</p>
+  </div>
+</header>
+
+<section class="contact-section add-padding">
+  <div class="center-text">
+    <h1 class="alex-brush"><span class="custom-font">Reach Out</span></h1>
+    <h2>*</h2>
+    <p>Feel free to get in touch with us using the form below or by reaching out directly.</p>
+  </div>
+  <div class="contact-form-container">
+    <form action="submit_contact.php" method="POST" class="contact-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit" class="contact-button">Send Message</button>
+    </form>
+  </div>
+
+  <div class="contact-info">
+    <h3>Contact Information</h3>
+    <p><strong>Phone:</strong> +91 9823062328</p>
+    <p><strong>Email:</strong> info@theladolcevita.com</p>
+    <p><strong>Address:</strong> 12 Colaba Causeway, Colaba, Mumbai, Maharashtra 400001</p>
+  </div>
+</section>
+
+<footer>
+  <button class="to-top"><i class="fa fa-chevron-up"></i>TOP</button>
+  <div class="restaurant-info">
+    <div class="locations">
+      <h4>LOCATIONS</h4>
+      <div class="location-1">
+        <h5>12 Colaba Causeway<br />Colaba, Mumbai, Maharashtra 400001</h5>
+      </div>
+      <div class="location-2">
+        <h5>77 Linking Road,<br />Bandra West, Mumbai, Maharashtra 400050</h5>
+      </div>
+    </div>
+    <div class="hours">
+      <h4>HOURS</h4>
+      <div class="weekdays">
+        <h5>Monday - Thursday<br />5:30pm - 10:00pm</h5>
+      </div>
+      <div class="weekends">
+        <h5>Friday & Saturday<br />5:30pm - 11:00pm</h5>
+      </div>
+      <div class="private-events">
+        <h5>Available for private events on Sunday</h5>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js'></script>
+</body>
+</html>

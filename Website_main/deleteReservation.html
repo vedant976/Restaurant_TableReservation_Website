@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Reservation | La Dolce Vita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header>
+  <h1 class="center">Delete a Reservation</h1>
+</header>
+
+<section class="delete-reservation-section add-padding">
+  <div class="delete-reservation-form-container">
+    <h2>Enter Reservation Name to Delete</h2>
+    <form id="delete-reservation-form" action="/reservation/cancel">
+        <label for="delete-name">Full Name:</label>
+        <input type="text" id="delete-name" name="name">
+      
+        <button type="submit" class="delete-button">Delete Reservation</button>
+    </form>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="script.js"></script> <!-- Vedant: Add JS file with delete logic -->
+<script src="manageReservations.js"></script> <!-- Vedant:  Add Js file for handling updates and deletes -->
+
+<script>
+  // Link the delete form submission to the deleteReservation function
+  $('#delete-reservation-form').submit(function(event) {
+      event.preventDefault();
+
+      // Get the trimmed name from the input field
+      const name = $('#delete-name').val().trim();
+
+      // Call the deleteReservation function with the name
+      deleteReservation(name);
+  });
+</script>
+
+</body>
+</html>
